@@ -11,6 +11,20 @@ spend by channel  ──adstock──▶  ──saturation──▶  joint regre
                                  channel contribution decomposition + ROI
 ```
 
+## Example output
+
+Weekly sales decomposed into base demand and each channel's contribution:
+
+![Sales decomposition](images/mmm_contributions.png)
+
+Estimated ROI by channel (contributed revenue per dollar spent):
+
+![Channel ROI](images/mmm_roi.png)
+
+On simulated data with a known ground truth, the model recovers channel ROIs in
+rank and magnitude and validates at **R² ≈ 0.79 / MAPE ≈ 1.7%** on a held-out
+final 20% of weeks.
+
 ## Why these steps
 
 **Adstock (carryover).** Advertising keeps working after the week it runs, so
